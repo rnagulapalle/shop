@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "fetchsandbox": {
+      "command": "npx",
+      "args": ["-y", "fetchsandbox-mcp@0.7.28"],
+      "env": {
+        "NODE_USE_ENV_PROXY": "1",
+        "NODE_EXTRA_CA_CERTS": "/root/.ccr/ca-bundle.crt"
+      }
+    }
+  }
+}
