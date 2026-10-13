@@ -8,3 +8,5 @@ __pycache__/
 *.db
 .next/
 next-env.d.ts
+!.env.example
+*.tsbuildinfo
