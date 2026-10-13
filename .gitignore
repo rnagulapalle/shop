@@ -3,3 +3,8 @@ node_modules/
 .env.*
 *.log
 .DS_Store
+.venv/
+__pycache__/
+*.db
+.next/
+next-env.d.ts
