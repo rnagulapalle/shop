@@ -14,8 +14,8 @@ Claude Code session, and each one answered:
 | `list_workflows` | `spec_slug: stripe` | 29 workflows, 16 failure scenarios |
 | `quickrun` | `stripe` `accept_payment` + `webhook_retries` | pass, 6/6 steps, returned sandbox + receipt |
 | `run_workflow` | `customers_create` on that sandbox | pass, 2/2 steps |
-| `verify_behavior` | `webhook_duplicate_side_effect` | async job started |
-| `get_job` | polled the `verify_behavior` job | responded with job status |
+| `verify_behavior` | `webhook_duplicate_side_effect` | async job; confirmed (buggy reference handler charged twice, fixed one charged once) |
+| `get_job` | polled the `verify_behavior` job | `running` → `done` after ~75s |
 | `validate_integration` | `providers: [stripe]`, then `inspect` state | session created, 19 probes listed, twin state read |
 | `coach` | start a Stripe integration session | session opened, asked first discovery question |
 
